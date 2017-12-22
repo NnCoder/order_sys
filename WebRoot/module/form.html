@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="GB2312">
+		<title></title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css" />
+		<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+		
+		<style>
+			.mpanel{
+				padding: 4 12px;
+				border-radius: 10px;
+				box-shadow: #666 0px 0px 10px;
+				margin: 4% auto;
+				width: 30%;
+			}
+			.mmain{
+				background-color: #666;
+			}
+			form .input-box{
+				padding: 4px 12px;
+				font-size: 14px;
+				border:1px solid #a1a1a1;
+				border-radius: 5px;
+			}
+			form h4{
+				color: #666;
+			}
+			
+			.mbtn{
+				margin-top: 15px;
+				
+			}
+			
+		</style>
+	</head>
+	
+	<body background="assets/img/login-food.jpg">
+		<div class="mpanel">
+		<div class="panel">
+			<div class="panel-heading"><h3>忘记密码</h3></div>
+			
+			<div class="panel-body">
+				
+				<form class="content-text" id="forgetPswForm">
+					
+					<h4>手机号码:</h4><input class="input-box form-control" type="text" pattern="" required="required"/>
+					<h4>类型:</h4>
+					<div class="input-group input-group-lg">
+						<input type="radio" name="type" value="customer" checked="checked"/>顾客
+						<input type="radio" name="type" value="shop" />商家
+					</div>
+					
+					<h4>验证码:</h4><input class="input-box" type="text" pattern="" required="required"/>
+					<button id="getCode" class="btn btn-primary btn-sm">获取手机验证码</button>
+					<h4>密码:</h4><input class="input-box form-control" type="password" required="required"/>
+					<h4>确认密码:</h4><input class="input-box form-control" type="password" required="required"/>
+					<input type="submit" class="mbtn btn btn-primary"  value="确认修改" />
+				</form>
+				
+		</div>
+		</div>
+		</div>
+	</body>
+	<script src="script/jquery-3.1.1.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$("#getCode").click(function(){
+				var s = 60;
+				var msg = "秒后可重新获取";
+				$(this).attr("disabled","disabled");
+				$(this).html(s+msg);
+				var timer = setInterval(function(){
+					s--;
+					$("#getCode").html(s+msg);
+				},1000);
+				setTimeout(function(){
+					$("#getCode").removeAttr("disabled");
+					$("#getCode").html("获取手机验证码");
+					clearInterval(timer);
+				},60000);
+				return false;
+			});
+		});
+		
+	</script>
+</html>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss.interceptor:jboss-interceptor:1.0.0-CR11">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/interceptor/jboss-interceptor/1.0.0-CR11/jboss-interceptor-1.0.0-CR11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/interceptor/jboss-interceptor/1.0.0-CR11/jboss-interceptor-1.0.0-CR11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/interceptor/jboss-interceptor/1.0.0-CR11/jboss-interceptor-1.0.0-CR11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

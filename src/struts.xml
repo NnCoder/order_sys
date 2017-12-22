@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.multipart.maxSize" value="104857600"/>
+    <package name="default" namespace="/" extends="json-default,struts-default">
+		
+	    <action name="*_*" class="{1}Action" method="{2}"> 	
+	        <result name="json" type="json">
+	        	<param name="root">
+	        		result
+	        	</param>
+	        </result>
+	        <result name="success">
+	        	/jsp/{1}/{1}_{2}.jsp
+	        </result>
+	        <result name="error">/index.jsp</result>
+	    </action>
+	  </package>
+</struts>    

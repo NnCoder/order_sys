@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="panel">
+    <div class="panel-heading">
+        <h3>营业额统计</h3>
+        <select class="form-control" id="daySelect" onchange="turnover(-1)">
+            <option value="1" selected>今天</option>
+            <option value="7">过去一周</option>
+            <option value="30">过去一月</option>
+        </select>
+
+    </div>
+    <div class="panel-body" id="turnoverTable">
+
+    </div>
+</div>
+</body>
+</html>

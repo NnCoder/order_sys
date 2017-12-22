@@ -1,0 +1,8 @@
+.messageBox{
+    width: 512px;
+    height: 254px;
+    overflow: scroll;
+    top: 200px; left:1024px;
+    background-color: #6ecadc;
+    position:absolute;
+}
