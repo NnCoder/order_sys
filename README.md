@@ -1,7 +1,7 @@
 # 在线订餐及管理系统
 基于SSH,MySQL数据库及WebSocket的在线订餐及管理系统，做得稍微有点烂，但交个课程设计什么的应该没什么问题，购物车模块功能还不是太过完善，有意者可以自己添加。
 # 关于配置
-需在tomcat的server.xml配置  <Host> 标签里添加
+需在tomcat的server.xml配置  \<Host\> 标签里添加 \<Context path="/ord_upload" docBase="C:\\upload\\ord_sys"/\>
 	
     <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true">
@@ -18,7 +18,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log." suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-	<Context path="/ord_upload" docBase="C:\\upload\\ord_sys"/>
+	<Context path="/ord_upload" docBase="C:\\upload\\ord_sys"/> //添加此行
       </Host>
 且需要修改db.properties里的数据库配置修改成自己电脑上的配置：
 
