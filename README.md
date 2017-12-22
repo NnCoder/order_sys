@@ -20,12 +20,13 @@
 	<Context path="/ord_upload" docBase="C:\\upload\\ord_sys"/>
       </Host>
 且需要修改db.properties里的数据库配置修改成自己电脑上的配置：
-  jdbc.user=root   
-  jdbc.password=mysql
-  jdbc.driver=com.mysql.jdbc.Driver
-  jdbc.url=jdbc:mysql://localhost:3306/order_demo 
 
-  jdbc.minPoolSize=5
-  jdbc.maxPoolSize=10
+	  jdbc.user=root   
+	  jdbc.password=mysql
+	  jdbc.driver=com.mysql.jdbc.Driver
+	  jdbc.url=jdbc:mysql://localhost:3306/order_demo 
+
+	  jdbc.minPoolSize=5
+	  jdbc.maxPoolSize=10
 
 
